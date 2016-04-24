@@ -4,100 +4,98 @@
 Poniżej znajduje się konfiguracja postaci:
 
 #character1 {
-background: url("http://i.imgur.com/rVYNzUe.png"); <-------------  tło dla pierwszego segmentu
-background-position: 50% 70%; <--------------- pozycja obrazka background-position: poziom pion;
+	background: url("http://i.imgur.com/rVYNzUe.png"); <-------------  tło dla pierwszego segmentu
+	background-position: 50% 70%; <--------------- pozycja obrazka background-position: poziom pion;
 }
 
 #character1:hover > div {
-background: rgba(255, 192, 0, 0.7); <----------------- kolor podświetlenia
+	background: rgba(255, 192, 0, 0.7); <----------------- kolor podświetlenia
 }
 
 */
-#character1 {
-background: url("http://i.imgur.com/rVYNzUe.png");
-background-position: 50% 70%;
-}
-
-#character1:hover > div {
-background: rgba(255, 192, 0, 0.7);
-}
+	#character1 {
+		background: url("http://i.imgur.com/rVYNzUe.png");
+		background-position: 50% 70%;
+	}
+	
+	#character1:hover > div {
+		background: rgba(255, 192, 0, 0.7);
+	}
 
 </style>
 
 <div class="general_box clearfix">
-<h3>Panel postaci v2</h3>
-<div class="character" id="character1">
-
-	<div class="ppavatar">
-		<IMG src="http://i.imgur.com/LZ7JGte.png">
+	<h3>Panel postaci v2</h3>
+	<div class="character" id="character1">
+		<div class="ppavatar">
+			<IMG src="http://i.imgur.com/LZ7JGte.png">
+		</div>
+		<div class="ppinformacje">
+			<table>
+				<TR><TD>Stanowisko OOC:</TD><TD> Zaufany Gracz</TD></TR>
+				<TR><TD>Imię i nazwisko:</TD><TD> Krzysztof Golder</TD></TR>
+				<TR><TD>Miejsce pracy:</TD><TD> Urząd Miasta</TD></TR>
+				<TR><TD>Stanowisko:</TD><TD> Zastępca Burmistrza LS</TD></TR>
+				<TR><TD>Numer telefonu:</TD><TD>33311</TD></TR>
+				<TR><TD>Adres zamieszkania:</TD><TD> Marina</TD></TR>
+			</table>
+		</div>
+		<div class="pppojazdy">
+			<img src="http://i.imgur.com/R1dlDTj.jpg">
+			<img src="http://i.imgur.com/qWWThS5.jpg">
+			<img src="http://i.imgur.com/MJtDaW5.jpg">
+		</div>
 	</div>
-	<div class="ppinformacje">
-		<table>
-			<TR><TD>Stanowisko OOC:</TD><TD> Zaufany Gracz</TD></TR>
-			<TR><TD>Imię i nazwisko:</TD><TD> Krzysztof Golder</TD></TR>
-			<TR><TD>Miejsce pracy:</TD><TD> Urząd Miasta</TD></TR>
-			<TR><TD>Stanowisko:</TD><TD> Zastępca Burmistrza LS</TD></TR>
-			<TR><TD>Numer telefonu:</TD><TD>33311</TD></TR>
-			<TR><TD>Adres zamieszkania:</TD><TD> Marina</TD></TR>
-		</table>
-	</div>
-	<div class="pppojazdy">
-		<img src="http://i.imgur.com/R1dlDTj.jpg">
-		<img src="http://i.imgur.com/qWWThS5.jpg">
-		<img src="http://i.imgur.com/MJtDaW5.jpg">
-	</div>
-
-</div>
 </div>
 
 <style type="text/css">
-.character {
-height: 300px;
-width: 100%;
-display: table;
-}
-
-
-.character:hover > div {
-opacity: 1;
-transition: all 1s;
-}
-
-.character > div {
-cursor: default;
-background: none;
-transition: all 1s;
-width: 33%;
-height: 300px;
-box-sizing: border-box;
-text-align: center;
-display:table-cell;
-vertical-align:middle;
-padding: 5px;
-opacity: 0;
-}
-
-.character > .ppavatar > img, .character > .pppojazdy > img {
-transform: scale(0.9, 0.9);
-width: 90%;
-background: url("http://i.imgur.com/efKnAYO.jpg");
-border: 2px solid #FFF;
-box-sizing: border-box;
-margin: 5px;
-transition: all 0.5s;
-}
-
-.character > .ppavatar > img:hover, .character > .pppojazdy > img:hover {
-transform: scale(1, 1);
-transition: all 0.5s;
-}
-
-.character > .ppinformacje tr {
-background: transparent;
-transition: all 0.2s;
-}
-.character > .ppinformacje tr:hover {
-background: rgba(255,255,255,0.1);
-transition: all 0.2s;
-}
+	.character {
+		height: 300px;
+		width: 100%;
+		display: table;
+	}
+	
+	
+	.character:hover > div {
+		opacity: 1;
+		transition: all 1s;
+	}
+	
+	.character > div {
+		cursor: default;
+		background: none;
+		transition: all 1s;
+		width: 33%;
+		height: 300px;
+		box-sizing: border-box;
+		text-align: center;
+		display:table-cell;
+		vertical-align:middle;
+		padding: 5px;
+		opacity: 0;
+	}
+	
+	.character > .ppavatar > img, .character > .pppojazdy > img {
+		transform: scale(0.9, 0.9);
+		width: 90%;
+		background: url("http://i.imgur.com/efKnAYO.jpg");
+		border: 2px solid #FFF;
+		box-sizing: border-box;
+		margin: 5px;
+		transition: all 0.5s;
+	}
+	
+	.character > .ppavatar > img:hover, .character > .pppojazdy > img:hover {
+		transform: scale(1, 1);
+		transition: all 0.5s;
+	}
+	
+	.character > .ppinformacje tr {
+		background: transparent;
+		transition: all 0.2s;
+	}
+	.character > .ppinformacje tr:hover {
+		background: rgba(255,255,255,0.1);
+		transition: all 0.2s;
+	}
 </style>
