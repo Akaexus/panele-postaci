@@ -35,7 +35,7 @@
 .ax.p1 > .side:last-of-type > table > tbody > tr:last-of-type {
   border: none;
 }
-.ax.p1 > .side:last-of-type > table > tbody > tr:first-of-type {
+.ax.p1 > .side:last-of-type > table > tbody > tr td:first-of-type {
   border-right: 1px solid rgba(50, 50, 50, 0.15);
 }
 

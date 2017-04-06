@@ -39,7 +39,7 @@
           &:last-of-type {
             border: none;
           }
-          &:first-of-type {
+          td:first-of-type {
             border-right: 1px solid rgba(50, 50, 50, 0.15);
           }
           border-bottom: 1px solid rgba(50, 50, 50, 0.15);
