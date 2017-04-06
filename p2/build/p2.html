@@ -1,23 +1,25 @@
 <style media="screen">
-	.ch1 {
+	.ax {
 	  background: url("http://i.imgur.com/rVYNzUe.png");
 	  background-position: 50% 70%;
 	}
-	.ch1:hover > div {
+	.ax:hover > .ch1 {
 	  background: rgba(255, 192, 0, 0.7);
 	}
 
-	.ax.p2 {
+	.ax > .p2 {
 	  color: #FFFFFF;
 	  height: 300px;
 	  width: 100%;
 	  display: table;
+	  opacity: 0;
+	  transition: all 1s;
 	}
-	.ax.p2:hover div {
+	.ax > .p2:hover {
 	  opacity: 1;
 	  transition: all 1s;
 	}
-	.ax.p2 > div {
+	.ax > .p2 > div {
 	  cursor: default;
 	  background: none;
 	  transition: all 1s;
@@ -28,9 +30,8 @@
 	  display: table-cell;
 	  vertical-align: middle;
 	  padding: 5px;
-	  opacity: 0;
 	}
-	.ax.p2 > .p2avatar img, .ax.p2 > .p2vehs img {
+	.ax > .p2 > .p2avatar img, .ax > .p2 > .p2vehs img {
 	  transform: scale(0.9, 0.9);
 	  width: 90%;
 	  background: url("http://i.imgur.com/efKnAYO.jpg");
@@ -39,15 +40,15 @@
 	  margin: 5px;
 	  transition: all 0.5s;
 	}
-	.ax.p2 > .p2avatar img:hover, .ax.p2 > .p2vehs img:hover {
+	.ax > .p2 > .p2avatar img:hover, .ax > .p2 > .p2vehs img:hover {
 	  transform: scale(1, 1);
 	  transition: all 0.5s;
 	}
-	.ax.p2 > .p2info tr {
+	.ax > .p2 > .p2info tr {
 	  background: transparent;
 	  transition: all 0.2s;
 	}
-	.ax.p2 > .p2info tr:hover {
+	.ax > .p2 > .p2info tr:hover {
 	  background: rgba(255, 255, 255, 0.1);
 	  transition: all 0.2s;
 	}
@@ -55,42 +56,44 @@
 
 <div class="general_box clearfix">
 	<h3>Panel postaci #2</h3>
-	<div class="ax p2 ch1">
-		<div class="p2avatar">
-			<img src="http://i.imgur.com/LZ7JGte.png">
-		</div>
-		<div class="p2info">
-			<table>
-				<tr>
-					<td>Stanowisko OOC:</td>
-					<td>Zaufany Gracz</td>
-				</tr>
-				<tr>
-					<td>Imię i nazwisko:</td>
-					<td>Krzysztof Golder</td>
-				</tr>
-				<tr>
-					<td>Miejsce pracy:</td>
-					<td>Urząd Miasta</td>
-				</tr>
-				<tr>
-					<td>Stanowisko:</td>
-					<td>Zastępca Burmistrza LS</td>
-				</tr>
-				<tr>
-					<td>Numer telefonu:</td>
-					<td>33311</td>
-				</tr>
-				<tr>
-					<td>Adres zamieszkania:</td>
-					<td>Marina</td>
-				</tr>
-			</table>
-		</div>
-		<div class="p2vehs">
-			<img src="http://i.imgur.com/R1dlDTj.jpg">
-			<img src="http://i.imgur.com/qWWThS5.jpg">
-			<img src="http://i.imgur.com/MJtDaW5.jpg">
+	<div class="ax">
+		<div class=" p2 ch1">
+			<div class="p2avatar">
+				<img src="http://i.imgur.com/LZ7JGte.png">
+			</div>
+			<div class="p2info">
+				<table>
+					<tr>
+						<td>Stanowisko OOC:</td>
+						<td>Zaufany Gracz</td>
+					</tr>
+					<tr>
+						<td>Imię i nazwisko:</td>
+						<td>Krzysztof Golder</td>
+					</tr>
+					<tr>
+						<td>Miejsce pracy:</td>
+						<td>Urząd Miasta</td>
+					</tr>
+					<tr>
+						<td>Stanowisko:</td>
+						<td>Zastępca Burmistrza LS</td>
+					</tr>
+					<tr>
+						<td>Numer telefonu:</td>
+						<td>33311</td>
+					</tr>
+					<tr>
+						<td>Adres zamieszkania:</td>
+						<td>Marina</td>
+					</tr>
+				</table>
+			</div>
+			<div class="p2vehs">
+				<img src="http://i.imgur.com/R1dlDTj.jpg">
+				<img src="http://i.imgur.com/qWWThS5.jpg">
+				<img src="http://i.imgur.com/MJtDaW5.jpg">
+			</div>
 		</div>
 	</div>
 </div>

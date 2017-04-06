@@ -1,7 +1,7 @@
-.ch1 {
+.ax {
   background: url("http://i.imgur.com/rVYNzUe.png");
   background-position: 50% 70%;
-  &:hover > div {
+  &:hover > .ch1 {
     background: rgba(255, 192, 0, 0.7);
   }
 }

@@ -1,16 +1,16 @@
 @import 'character1';
 
 .ax {
-  &.p2 {
+  >.p2 {
     color: #FFFFFF;
     height: 300px;
     width: 100%;
     display: table;
+    opacity: 0;
+    transition: all 1s;
     &:hover {
-      div {
-        opacity: 1;
-        transition: all 1s;
-      }
+      opacity: 1;
+      transition: all 1s;
     }
     >div {
       cursor: default;
@@ -23,7 +23,6 @@
       display:table-cell;
       vertical-align:middle;
       padding: 5px;
-      opacity: 0;
     }
     >.p2avatar, >.p2vehs {
       img {
