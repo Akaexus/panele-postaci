@@ -17,7 +17,7 @@ Poniżej znajduje się konfiguracja postaci:
 		background: url("http://i.imgur.com/rVYNzUe.png");
 		background-position: 50% 70%;
 	}
-	
+
 	#character1:hover > div {
 		background: rgba(255, 192, 0, 0.7);
 	}
@@ -28,16 +28,16 @@ Poniżej znajduje się konfiguracja postaci:
 	<h3>Panel postaci v2</h3>
 	<div class="character" id="character1">
 		<div class="ppavatar">
-			<IMG src="http://i.imgur.com/LZ7JGte.png">
+			<img src="http://i.imgur.com/LZ7JGte.png">
 		</div>
 		<div class="ppinformacje">
 			<table>
-				<TR><TD>Stanowisko OOC:</TD><TD> Zaufany Gracz</TD></TR>
-				<TR><TD>Imię i nazwisko:</TD><TD> Krzysztof Golder</TD></TR>
-				<TR><TD>Miejsce pracy:</TD><TD> Urząd Miasta</TD></TR>
-				<TR><TD>Stanowisko:</TD><TD> Zastępca Burmistrza LS</TD></TR>
-				<TR><TD>Numer telefonu:</TD><TD>33311</TD></TR>
-				<TR><TD>Adres zamieszkania:</TD><TD> Marina</TD></TR>
+				<tr><td>Stanowisko OOC:</td><td>Zaufany Gracz</td></tr>
+				<tr><td>Imię i nazwisko:</td><td>Krzysztof Golder</td></tr>
+				<tr><td>Miejsce pracy:</td><td>Urząd Miasta</td></tr>
+				<tr><td>Stanowisko:</td><td>Zastępca Burmistrza LS</td></tr>
+				<tr><td>Numer telefonu:</td><td>33311</td></tr>
+				<tr><td>Adres zamieszkania:</td><td>Marina</td></tr>
 			</table>
 		</div>
 		<div class="pppojazdy">
@@ -54,13 +54,12 @@ Poniżej znajduje się konfiguracja postaci:
 		width: 100%;
 		display: table;
 	}
-	
-	
+
 	.character:hover > div {
 		opacity: 1;
 		transition: all 1s;
 	}
-	
+
 	.character > div {
 		cursor: default;
 		background: none;
@@ -74,7 +73,7 @@ Poniżej znajduje się konfiguracja postaci:
 		padding: 5px;
 		opacity: 0;
 	}
-	
+
 	.character > .ppavatar > img, .character > .pppojazdy > img {
 		transform: scale(0.9, 0.9);
 		width: 90%;
@@ -84,12 +83,12 @@ Poniżej znajduje się konfiguracja postaci:
 		margin: 5px;
 		transition: all 0.5s;
 	}
-	
+
 	.character > .ppavatar > img:hover, .character > .pppojazdy > img:hover {
 		transform: scale(1, 1);
 		transition: all 0.5s;
 	}
-	
+
 	.character > .ppinformacje tr {
 		background: transparent;
 		transition: all 0.2s;
