@@ -1,0 +1,74 @@
+$characters: (
+  /* background url, width, margin-left*/
+  ('http://i.imgur.com/fHaKbse.png', 10%, 0),
+  ('http://i.imgur.com/uz2XCjs.png', 8%, -0.4%),
+  ('http://i.imgur.com/CYIZx1n.png', 10%, -3.7%),
+  ('http://i.imgur.com/PoFFeDJ.png', 6%, -3.6%),
+  ('http://i.imgur.com/sazQmOy.png', 10%, -3.5%),
+  ('http://i.imgur.com/8Bs9zj3.png', 14%, -3.7%),
+  ('http://i.imgur.com/nIGtnQU.png', 9%, -2.5%),
+  ('http://i.imgur.com/vkwoJy1.png', 9%, -2.2%),
+  ('http://i.imgur.com/3Zy3arQ.png', 6%, -6.9%),
+  ('http://i.imgur.com/v8XyCNG.png', 8%, -1%)
+);
+
+
+#branding {
+  height: auto;
+  background-image: url('http://i.imgur.com/glruXeh.jpg');
+  padding: 30px 0;
+  .main_width {
+    width: 100 !important;
+  }
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 14%;
+  }
+  >.characters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    .c4 {
+      height: 56%!important;
+      margin-bottom: 6%;
+    }
+    .c8 {
+      height: 49%!important;
+      margin-bottom: 7.1%;
+    }
+    .c9 {
+      height: 46%!important;
+    }
+    @each $c in $characters {
+      >.c#{index($characters, $c)} {
+        background-image: url('#{nth($c, 1)}');
+        width: #{nth($c, 2)};
+        margin-left: #{nth($c, 3)};
+      }
+    }
+    >div {
+      :hover {
+        transform: scale(1.2);
+        opacity: 1;
+        transition: all 1s;
+      }
+      display: inline-block;
+      height: 100%;
+      background-position: 50% 50%;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      transform: scale(1);
+      opacity: 0.6;
+      transition: all 1s;
+    }
+  }
+}

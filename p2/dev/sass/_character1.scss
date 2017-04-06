@@ -1,0 +1,7 @@
+.ch1 {
+  background: url("http://i.imgur.com/rVYNzUe.png");
+  background-position: 50% 70%;
+  &:hover > div {
+    background: rgba(255, 192, 0, 0.7);
+  }
+}
