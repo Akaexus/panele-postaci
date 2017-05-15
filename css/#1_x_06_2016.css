@@ -1,0 +1,118 @@
+body, html {
+  background: #212727;
+  color: #FFFFFF;
+}
+  
+a {
+  color: #577998;
+}
+
+#branding {
+  background: url('http://i.imgur.com/sNdadvl.jpg') no-repeat 50% 50% / auto 100%;
+  height: 500px;
+}
+
+.popupWrapper {
+  color: #5a5a5a;
+}
+
+.popupInner h3 {
+  background: #343C45;
+}
+
+#logo, #ipsDebug_footer, #secondary_navigation, .topic_buttons, .ipsLayout_content > .general_box:first-of-type > .ipsList_data > li {
+  display: none;
+}
+
+#content, #profile_background, .general_box, #profile_panes_wrap, #profile_content_main, #user_latest_status, #footer_utilities, .ipsVerticalTabbed_tabs > ul {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+  
+#copyright {
+  text-shadow: none;
+}
+
+#user_tab > div {
+  vertical-align: bottom;
+}
+
+.general_box {
+  border-right: solid 3px #343C45;
+}
+
+.general_box h3, .maintitle, .post_block h3 {
+  font-variant: small-caps;
+  border: solid 3px #343C45;
+  border-width: 3px 0 0 0;
+  font-size: 20px;
+  background: none;
+}
+
+.status_update {
+  background: none;
+  border: solid 3px #343C45;
+  border-width: 3px 3px 0 0;
+}
+
+.ipsType_pagetitle, .ipsType_subtitle {
+  font: 300 small-caps 35px/1.3 Open Sans,Helvetica,Arial,sans-serif;
+  color: #FFFFFF;
+}
+
+#user_latest_status > div {
+  background: none;
+  color: #FFFFFF;
+  border: 2px solid #343C45;
+  border-radius: 0;
+}
+
+.ipsLayout_content > .general_box:first-of-type > .ipsList_data > li:nth-of-type(1), .ipsLayout_content > .general_box:first-of-type > .ipsList_data > li:nth-of-type(2), .ipsLayout_content > .general_box:first-of-type > .ipsList_data > li:nth-of-type(8) {
+  display: block;
+}
+
+.reputation.positive, .members li.positive {
+  background: #343C45;
+}
+
+.ipsVerticalTabbed_tabs > ul {
+  font-variant: small-caps;
+}
+
+.ipsVerticalTabbed_tabs li.active a {
+  border-right: none;
+  background: #343C45;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.ipsVerticalTabbed_tabs li, .ipsVerticalTabbed_tabs li a:hover {
+  background: #343C45;
+  color: #808080;
+  border-bottom: none;
+  font-size: 13px;
+}
+
+.ipsButton_secondary, .bbc_spoiler_show, .user_controls li a, .topic_buttons li.important a, .topic_buttons li.important span, .ipsButton .important, .topic_buttons li a, .topic_buttons li span, .ipsButton {
+  background: #343C45;
+  border: none;
+  color: #FFFFFF;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.ipsLikeBar_info {
+  background: #343C45;
+  color: #FFF;
+}
+
+.post_body .post {
+  color: #FFFFFF;
+}
+
+#search .submit_input, #search_options {
+  background-color: #212727;
+  border-color: #212727;
+}
+
