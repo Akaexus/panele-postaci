@@ -1,0 +1,268 @@
+$fb-main: #3B5998;
+$grey-main: #E9EAED;
+$dark-grey: #4b4f56;
+$avatarSize: 170px;
+//imgs
+$defaultAvatar: 'http://i.imgur.com/hSidsQz.jpg';
+$iconsImg: 'http://i.imgur.com/oAidpD6.png';
+$utilitiesImg: 'http://i.imgur.com/acOHutM.png';
+$infoIcon: 'http://i.imgur.com/lIkrRDQ.png';
+
+@mixin greyBorder {
+  border: 1px solid #d3d6db;
+}
+
+//fonts
+$blueFont: #365899;
+
+.ax.fb {
+  a {
+    color: $blueFont;
+  }
+  .lightGrey {
+    color: #90949c;
+    &.small {
+      font-size: 85%;
+    }
+  }
+  background: $grey-main;
+  line-height: 1.34;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #1d2129;
+  >.chars {
+    text-align: center;
+    overflow-x: auto;
+    overflow-wrap: normal;
+    >label>.char {
+      &.dead {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: 0.6;
+      }
+      cursor: pointer;
+      box-sizing: border-box;
+      margin: 5px;
+      width: 28%;
+      display: inline-block;
+      position: relative;
+      background: transparent url() no-repeat 50% 50% / cover;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      &:after {
+        padding-top: 75%;
+        display: block;
+        content: '';
+      }
+      >.content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        >.name {
+          opacity: 0.85;
+          background: #FFFFFF;
+          line-height: 1.5;
+          color: $fb-main;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          border-bottom: 4px solid $fb-main;
+        }
+      }
+    }
+  }
+  >.wrapper {
+    //height: 800px;
+    overflow-y: scroll;
+    input[type=radio] {
+      +div {
+        display: none;
+      }
+      &:checked {
+        +div {
+          display: block;
+        }
+      }
+      display: none;
+    }
+    >.facebook {
+      >.background {
+        background: transparent url() no-repeat 50% 50% / cover;
+        height: 200px;
+        position: relative;
+        >.avatar {
+          position: absolute;
+          bottom: 0;
+          left: 5%;
+          transform: translate(0%, 15%);
+          border: 1px solid rgba(0, 0, 0, .3);
+          border-radius: 2px;
+          >.image {
+            height: $avatarSize;
+            width: $avatarSize;
+            padding: 1px;
+            background: rgba(0, 0, 0, .3) url($defaultAvatar) no-repeat 50% 50% / cover;
+            border: 4px solid #fff;
+            border-radius: 2px;
+          }
+        }
+        >.name {
+          position: absolute;
+          bottom: 0;
+          left: calc(5% + 20px + #{$avatarSize});
+          bottom: 10px;
+          color: #FFFFFF;
+          text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+          font-size: 24px;
+          font-weight: 500;
+        }
+      }
+      >.navigation {
+        @include greyBorder;
+        border-width: 0 1px 1px 1px;
+        font-size: 14px;
+        background: #FFFFFF;
+        font-weight: 700;
+        line-height: 3.05;
+        >ul {
+          padding: 0;
+          margin: 0 0 0 calc(5% + #{$avatarSize} + 20px);
+          display: flex;
+          >label {
+            li {
+              cursor: pointer;
+              padding: 0 17px;
+              list-style: none;
+              display: inline-block;
+              border-right: 1px solid #E9EAED;
+              position: relative;
+              &:not(.active) {
+                color: $blueFont;
+              }
+              &.active {
+                color: $dark-grey;
+                >.triangle {
+                  background: url($utilitiesImg);
+                  height: 9px;
+                  width: 17px;
+                  background-position: -19px -95px;
+                  position: absolute;
+                  bottom: -1px;
+                  left: 50%;
+                  transform: translate(-50%, 0);
+                }
+              }
+              &:first-of-type {
+                border-left: 1px solid #E9EAED;
+              }
+            }
+          }
+        }
+      }
+      >.content {
+        padding: 10px;
+      }
+      >.char-timeline+.content {
+        .fb-post {
+          font-size: 14px;
+          background: #fff;
+          border: 1px solid;
+          border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+          border-radius: 3px;
+          padding: 10px;
+          margin-bottom: 10px;
+          >.desc {
+            display: flex;
+            font-size: inherit;
+            >* {
+              display: inline-block;
+            }
+            >.avatar {
+              height: 40px;
+              width: 40px;
+              background: #323232 url($defaultAvatar) no-repeat 50% 50% / cover;
+            }
+            >.info {
+              margin-left: 10px;
+              >.name {
+                color: $blueFont;
+                font-weight: bold;
+              }
+            }
+          }
+          .post-content {
+            margin-top: 10px;
+            img {
+              max-width: 100%;
+              max-height: 100vh;
+              margin: 0 auto;
+            }
+            p {
+              margin-bottom: 10px;
+            }
+            >p:first-of-type {
+              margin-top: 0;
+            }
+          }
+          >.controls {
+            padding-top: 5px;
+            border-top: 1px solid #e5e5e5;
+            >ul {
+              margin: 0;
+              padding: 0;
+              >li {
+                color: #7f7f7f;
+                display: inline-block;
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 14px;
+                margin-right: 20px;
+                padding: 4px 4px 4px 0;
+                cursor: pointer;
+                &:before {
+                  display: inline-block;
+                  content: '';
+                  display: inline-block;
+                  height: 14px;
+                  margin: 0 6px -3px 0;
+                  width: 14px;
+                  background-image: url($utilitiesImg);
+                }
+                &.like:before {
+                  background-position: -17px -139px;
+                }
+                &.comment:before {
+                  background-position: -49px -56px;
+                }
+                &.share:before {
+                  background-position: -15px -156px;
+                }
+              }
+            }
+          }
+        }
+      }
+      >.char-info+.content {
+        .info {
+          background: #fff;
+          @include greyBorder;
+          border-radius: 3px 3px 0 0;
+          >.bar {
+            border-bottom: 1px solid #d3d6db;
+            background: #f6f7f9 url($infoIcon) no-repeat 14px 50%;
+            >h3 {
+              color: $dark-grey;
+              margin: 0;
+              padding: 0 0 0 45px;
+              line-height: 2.75;
+              &:before {
+                content: '';
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

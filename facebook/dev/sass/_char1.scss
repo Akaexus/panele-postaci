@@ -1,0 +1,19 @@
+$bottomAvatar: url('http://i.imgur.com/bHG8bek.png');
+$wrapperAvatar: url('http://i.imgur.com/hpJNRct.png');
+$wrapperBackground: url('http://i.imgur.com/yRDtRWa.jpg');
+
+
+.ax.fb {
+  >.wrapper {
+    >.char1 {
+      .background {
+        background-image: $wrapperBackground;
+      }
+    }
+  }
+  >.chars>label {
+    >.char.char1 {
+        background-image: $bottomAvatar;
+    }
+  }
+}
