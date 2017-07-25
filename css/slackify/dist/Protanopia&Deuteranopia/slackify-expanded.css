@@ -182,7 +182,7 @@
 #ipbwrapper > #branding .main_width > #logo {
   display: block;
   width: 250px;
-  background: #303E4D;
+  background: #4F2F4C;
 }
 #ipbwrapper > #branding .main_width > #logo > a {
   display: block;
@@ -208,7 +208,7 @@
   }
 }
 #ipbwrapper > #branding .main_width > #user_tab {
-  background: #303E4D;
+  background: #4F2F4C;
   width: 250px;
   box-sizing: border-box;
   padding: 0 1rem;
@@ -248,7 +248,7 @@
   height: 0;
   width: 0;
   padding: 0;
-  border: 4.5px solid #94E864;
+  border: 4.5px solid #CDFA01;
   border-radius: 100%;
 }
 #ipbwrapper > #branding .main_width > #user_tab #user_navigation > ul > li:nth-of-type(3):not(:nth-of-type(3)) > a {
@@ -287,7 +287,7 @@
   width: 25px;
   border-radius: 9px;
   padding: 2px 0;
-  background: #78AF8F;
+  background: #889100;
   color: #FFFFFF;
   top: 0;
   left: 0;
@@ -311,7 +311,7 @@
   width: 25px;
   border-radius: 9px;
   padding: 2px 0;
-  background: #78AF8F;
+  background: #889100;
   color: #FFFFFF;
   top: 0;
   left: 0;
@@ -335,7 +335,7 @@
   width: 25px;
   border-radius: 9px;
   padding: 2px 0;
-  background: #78AF8F;
+  background: #889100;
   color: #FFFFFF;
   top: 0;
   left: 0;
@@ -419,7 +419,7 @@
 }
 #profile_background > .ipsVerticalTabbed.ipsLayout.ipsLayout_withleft.ipsLayout_smallleft > #profile_tabs {
   margin: 23px 0 0 0;
-  background: #303E4D;
+  background: #4F2F4C;
   color: #ACB1B7;
   width: 250px;
   flex: 0 0 250px;
@@ -465,7 +465,7 @@
   border: none;
 }
 #profile_background > .ipsVerticalTabbed.ipsLayout.ipsLayout_withleft.ipsLayout_smallleft > #profile_tabs > ul.clear > li.active {
-  background: #6698C8 !important;
+  background: #8C5888 !important;
 }
 #profile_background > .ipsVerticalTabbed.ipsLayout.ipsLayout_withleft.ipsLayout_smallleft > #profile_tabs > ul.clear > li.active > a {
   background: none;
@@ -474,7 +474,7 @@
   border: none;
 }
 #profile_background > .ipsVerticalTabbed.ipsLayout.ipsLayout_withleft.ipsLayout_smallleft > #profile_tabs > ul.clear > li:hover {
-  background: #3F4C5A;
+  background: #443042;
 }
 #profile_background > .ipsVerticalTabbed.ipsLayout.ipsLayout_withleft.ipsLayout_smallleft > #profile_tabs > ul.clear > li:hover > a {
   background: none;
@@ -502,7 +502,7 @@
   display: block;
 }
 #profile_background .warn_panel > strong:hover {
-  background: #3F4C5A;
+  background: #443042;
 }
 #profile_background .warn_panel > strong > a {
   color: #FFFFFF !important;
@@ -559,7 +559,7 @@
 }
 
 #backtotop + div + div {
-  background-image: url(https://i.imgur.com/YaxcKzt.jpg);
+  background-image: url(http://i.imgur.com/eIWksqv.jpg);
 }
 
 body, html, input {
@@ -590,6 +590,6 @@ body, html, input {
 }
 
 .topic_buttons li.important a, .topic_buttons li.important span, .ipsButton .important, .topic_buttons li a, .topic_buttons li span, .ipsButton, .maintitle, body > div[id^='aja'], .popupInner h3 {
-  background: #303E4D;
-  border-color: #303E4D;
+  background: #4F2F4C;
+  border-color: #4F2F4C;
 }
