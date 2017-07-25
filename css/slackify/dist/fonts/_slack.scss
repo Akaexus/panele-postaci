@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Slack';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://a.slack-edge.com/81c44/fonts/slack-icons-Regular.woff2') format('woff2'), url('https://a.slack-edge.com/81c44/fonts/slack-icons-Regular.woff') format('woff');
+}
+
+@mixin slackFontIcons($size, $icon) {
+  font-family: 'Slack';
+  font-size: $size;
+  font-style: normal;
+  font-weight: 400;
+  content: $icon;
+}

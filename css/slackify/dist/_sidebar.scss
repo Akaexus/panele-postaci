@@ -1,0 +1,116 @@
+@import 'config';
+@import 'theme';
+#profile_background{
+  >.ipsVerticalTabbed.ipsLayout.ipsLayout_withleft.ipsLayout_smallleft {
+    display: flex;
+    padding-left: 0;
+    >#profile_tabs {
+      margin: 23px 0 0 0;
+      background: $sidebarBackground;
+      color: #ACB1B7;
+      width: $sidebarWidth;
+      flex: 0 0 $sidebarWidth;
+      padding-right: 20px;
+      box-sizing: border-box;
+      > .photo_holder {
+        position: absolute;
+        height: auto;
+        top: 46px;
+        z-index: 1;
+        left: $sidebarWidth+70px;
+        transform: translate(-50%, -50%);
+        >#profile_photo {
+          max-width: 115px;
+          max-height: 115px;
+        }
+      }
+      >ul.clear {
+        border: none;
+        width: 100% !important;
+        padding-right: 20px;
+        box-sizing: border-box;
+        &:before {
+          display: block;
+          margin: 0 1rem .1rem;
+          padding: 0;
+          font-size: .8rem;
+          line-height: 1.25rem;
+          font-weight: 700;
+          content: 'Użytkowe';
+          text-transform: uppercase;
+        }
+        >li {
+          height: 1.5rem;
+          line-height: 1.5rem;
+          border-radius: 0 .25rem .25rem 0;
+          width: 100%;
+          background: none;
+          padding: 0 .25rem 0 1rem;
+          display: block;
+          border: none;
+          &.active {
+            background: $sidebarActive !important;
+            > a {
+              background: none;
+              opacity: 1;
+              color: #FFFFFF !important;
+              border: none;
+            }
+          }
+          &:hover {
+            background: $sidebarHightlight;
+            >a {
+              background: none;
+            }
+          }
+          >a {
+            opacity: 0.6;
+            color: #FFFFFF;
+            width: 100%;
+            padding: 0;
+            font-size: .9rem;
+            text-transform: lowercase;
+            &:before {
+              content: '#';
+              color: #ACB1B7;
+              margin-right: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .warn_panel {
+    text-align: left !important;
+    >strong {
+      padding: 0 .25rem 0 1rem;
+      height: 1.5rem;
+      opacity: 0.6;
+      display: block;
+      &:hover {
+        background: $sidebarHightlight;
+      }
+      > a {
+        color: #FFFFFF !important;
+        font-size: .8rem;
+        line-height: 1.5rem;
+        &:before {
+          content: '#';
+          color: #ACB1B7;
+          margin-right: 3px;
+        }
+      }
+    }
+    &:before {
+      display: block;
+      margin: 0 1rem .1rem;
+      padding: 0;
+      font-size: .8rem;
+      line-height: 1.25rem;
+      font-weight: 700;
+      content: 'Administracyjne';
+      text-transform: uppercase;
+    }
+  }
+}

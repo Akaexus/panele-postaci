@@ -1,0 +1,26 @@
+#user_info_cell {
+  padding-left: 130px;
+}
+
+.fn.nickname {
+  font-family: 'Lato';
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 75%;
+  &:before {
+    content: '@';
+  }
+}
+
+.ipsButton_secondary {
+  text-transform: lowercase;
+}
+.___hover___member, ._hoversetup {
+  text-transform: lowercase;
+  &:before {
+    content: '@';
+  }
+}
+.ipsVerticalTabbed_content {
+  min-height: inherit !important;
+}

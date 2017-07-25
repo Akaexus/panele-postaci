@@ -1,0 +1,8 @@
+@import 'theme';
+.breadcrumb.bottom, #backtotop + div /*debug hack*/ {
+  display: none;
+}
+
+#backtotop + div + div /*footer hack*/ {
+  background-image: url(#{$footerBackground});
+}

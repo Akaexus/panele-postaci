@@ -1,0 +1,118 @@
+@import '../fonts/slack';
+@import '../utils';
+@import '../mixins';
+@import '../theme';
+
+$searchBarHeight: 34px;
+
+#search {
+  height: $searchBarHeight;
+  right: 25px;
+  position: relative;
+  float: none;
+  #search_wrap {
+    height: $searchBarHeight;
+    border: 1px solid rgba(113,114,116,.5);
+    padding: 0 4px 0 30px;
+    box-shadow: none;
+    &:before {
+      @include slackFontIcons(20px, '\E010');
+      position: absolute;
+      left: $searchBarHeight/2;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    >input.submit_input {
+      background: none;
+      border: none;
+      right: auto;
+      left: 0;
+      height: 100%;
+    }
+    >#search_options {
+      text-transform: lowercase;
+      margin: 0;
+      position: absolute;
+      right: 2%;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 1px solid rgba(113, 114, 116, 0.5);
+      background: none;
+    }
+    >#search_options_menucontent {
+      @include slackPopup;
+      color: #A0A0A2;
+      text-align: left;
+      left: 0 !important;
+      min-width: 100%;
+      >li.title {
+        padding: 20px 14px 12px;
+        display: flex;
+        color: #A0A0A2;
+        font-size: 13px;
+        align-items: center;
+        justify-content: space-between;
+        &:after {
+          content: '.';
+          width: 100%;
+          border-bottom: 1px solid #DDDDDD;
+          height:0;
+          color: #A0A0A2;
+        }
+        >strong {
+          font-weight: normal;
+          line-height: 1rem;
+          float: left;
+          margin-right: 5%;
+        }
+      }
+      li:not(.title) {
+        margin: 0 .9375rem;
+        font-size: 16px;
+        padding: 0 1rem 0 .5rem;
+        border-radius: .25rem;
+        line-height: 25px;
+        >label {
+          >input {
+            position: absolute;
+            visibility: hidden;
+          }
+        }
+        &:hover {
+          background: $menuHighlight;
+          color: #D7EDFA;
+        }
+      }
+    }
+    >input#main_search {
+      height: 100%;
+      padding-top: 0;
+      font-size: 15px;
+      width: 100%;
+      color: #555459;
+      &::placeholder {
+        color: #D1D1D1;
+      }
+    }
+  }
+  #adv_search {
+    float: left;
+    height: $searchBarHeight;
+    width: $searchBarHeight;
+    line-height: 1;
+    background: none;
+    font-size: 0;
+    position: relative;
+    margin: 0 !important;
+    &:after {
+      @include slackFontIcons(20px, '\E020');
+      @include absoluteCenter;
+      color: #717274;
+    }
+    &:hover {
+      &:after{
+        color: $menuHighlight;
+      }
+    }
+  }
+}
