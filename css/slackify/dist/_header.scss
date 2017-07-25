@@ -1,0 +1,70 @@
+@import 'config';
+@import 'theme';
+
+@import 'header/searchbar';
+#ipbwrapper {
+  position: relative;
+  >#header_bar {
+    position: absolute;
+    width: calc(100% - #{$sidebarWidth});
+    min-width: inherit;
+    right: 0;
+    background: #FFFFFF !important;
+    >.main_width {
+      min-width: unset;
+      width: auto;
+      height: auto;
+      >ul.ipsList_inline.left {
+        text-transform: lowercase;
+        display: flex;
+        font-size: .8125rem;
+        >li {
+          a {
+            color: #717274;
+            &:before {
+              content: '#';
+            }
+          }
+          &.active{
+            order: -1;
+            > a {
+              color: #2C2D30;
+            }
+            font-size: 1.125rem;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+  >#branding {
+    background: #FFFFFF;
+    height: 43px !important;
+    .main_width {
+      margin: 0 auto;
+      min-width: inherit;
+      width: auto;
+      >#logo {
+        display: block;
+        width: $sidebarWidth;
+        background: $sidebarBackground;
+        >a {
+          display: block;
+          &:after {
+            display: block;
+            content: $title;
+            color: #FFFFFF;
+            font-size: 1.125rem;
+            line-height: 1.375rem;
+            font-weight: 900;
+            padding: .5rem 1rem 0 1rem;
+          }
+          >img {
+            display: none;
+          }
+        }
+      }
+      >{@import 'header/usertab';}
+    }
+  }
+}

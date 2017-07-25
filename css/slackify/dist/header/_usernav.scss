@@ -1,0 +1,67 @@
+@import '../mixins';
+#user_link_menucontent {
+  @include slackPopup;
+  width: 110%;
+  padding: 15px 14px;
+  top: 37px;
+  left: 0;
+  >a.ipsUserPhotoLink {
+    display: none;
+  }
+  >div.left {
+    margin-left: 0;
+    width: 100%;
+    >form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      &:after {
+        @include slackFontIcons(20px, '\E024');
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0%, -50%);
+      }
+      >br {
+        display: none;
+      }
+      >input#statusSubmitGlobal {
+        opacity: 0;
+        width: 25px;
+        // &:focus {
+        //   box-shadow: none;
+        // }
+      }
+      >input#statusUpdateGlobal {
+        font-size: 15px;
+        color: #555459;
+        border: 1px solid rgba(113, 114, 116, 0.5);
+        border-radius: 3px 4px 4px 3px;
+      }
+    }
+    >ul#links {
+      padding: 0 .4375rem;
+      > li {
+        // margin: 0 .9375rem;
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        padding: 0 1rem 0 .5rem;
+        border-radius: .25rem;
+        line-height: 25px;
+        > a {
+          display: block;
+          color: rgb(44, 45, 48);
+        }
+        &:hover {
+          background: $menuHighlight;
+          >a {
+            color: #D7EDFA;
+          }
+        }
+      }
+    }
+  }
+}

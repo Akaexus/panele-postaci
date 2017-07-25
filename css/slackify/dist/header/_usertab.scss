@@ -1,0 +1,101 @@
+@import '../config';
+@import '../fonts/slack';
+
+
+$usertabOrder: 2, 3, 1, 4;
+$usertabIcons: ((selector: '>#notify_link', icon: '\E015'),
+  (selector: '>#inbox_link', icon: '\E037'),
+  (selector: '&:nth-of-type(4) > a', icon: '\E081'));
+
+#user_tab {
+  background: $sidebarBackground;
+  width: $sidebarWidth;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  font-size: .875rem;
+  float:none;
+  height: auto;
+  > div {
+    position: relative;
+  }
+  #user_navigation {
+    >ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      float: none;
+      >li {
+        >a {
+          color: #FFFFFF;
+          opacity: 0.75;
+        }
+        &:hover {
+          >a {
+            opacity: 1;
+          }
+        }
+        @for $i from 1 through 4 {
+          &:nth-of-type(#{$i}) {
+            order: nth($usertabOrder, $i);
+          }
+        }
+        &:nth-of-type(3) {
+          >a:not(#user_link) {
+            >img {
+              height: 0;
+              width: 0;
+              padding: 0;
+              border: 4.5px solid $onlineColor;
+              border-radius: 100%;
+            }
+          }
+          &:not(:nth-of-type(3)){
+            > a {
+              padding: 4px;
+            }
+          }
+          >#user_link {
+            font-size: .875rem;
+            padding: 0 4px;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: lowercase;
+            &.menu_active {
+              background: none;
+            }
+          }
+        }
+        &:last-of-type {
+          font-size: 0;
+        }
+        > {
+          #inbox_link, #notify_link {
+            padding: 5px;
+          }
+        }
+        @each $iconset in $usertabIcons {
+          #{map-get($iconset, 'selector')} {
+            background: none;
+            &:after {
+              @include slackFontIcons(20px, map-get($iconset, 'icon'));
+            }
+            >.ipsHasNotifications {
+              text-shadow: 0 1px 0 rgba(0,0,0,.2);
+              font-size: .8rem;
+              line-height: .8rem;
+              font-weight: 700;
+              width: 25px;
+              border-radius: 9px;
+              padding: 2px 0;
+              background: $notifyBackground;
+              color: $notifyColor;
+              top: 0;
+              left: 0;
+              transform: translate(-40%, -40%);
+            }
+          }
+        }
+      }
+    }
+  }
+  @import 'usernav';
+}
