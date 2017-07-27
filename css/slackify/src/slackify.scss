@@ -1,0 +1,42 @@
+@import 'config';
+@import 'theme';
+
+//fonts
+@import 'fonts/lato.scss';
+@import 'fonts/slack.scss';
+
+@import 'header';
+@import 'sidebar';
+@import 'content';
+@import 'footer';
+
+body, html, input {
+  font-family: 'Lato', Arial, Helvetica, sans-serif !important;
+}
+
+#content {
+  width: 100% !important;
+  box-sizing: border-box;
+  padding: 0 !important;
+  >#profile_background {
+    padding: 0;
+  }
+}
+
+#secondary_navigation, #content > .topic_buttons, #content > br {
+  display: none;
+}
+#custom_background {
+  position: relative;
+  >.topic_buttons {
+    position: absolute;
+    top: 98px;
+    right: 120px;
+    z-index:1;
+  }
+}
+
+.topic_buttons li.important a, .topic_buttons li.important span, .ipsButton .important, .topic_buttons li a, .topic_buttons li span, .ipsButton, .maintitle, body>div[id^='aja'], .popupInner h3 {
+  background: $sidebarBackground;
+  border-color: $sidebarBackground;
+}

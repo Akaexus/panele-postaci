@@ -1,0 +1,8 @@
+@mixin slackPopup {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0,0,0,.07);
+  border-top: 1px solid #E0E0E0;
+  box-shadow: 0 0 1px rgba(0,0,0,.04),0 2px 8px rgba(0,0,0,.1);
+  border-radius: 10px;
+  padding: 0 0 15px 0;
+}
