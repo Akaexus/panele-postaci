@@ -41,10 +41,14 @@
     background: #FFFFFF;
     height: 43px !important;
     .main_width {
-      margin: 0 auto;
+      margin: 0;
       min-width: inherit;
       width: auto;
+      justify-content: left;
+      align-items: baseline;
+      flex-direction: column;
       >#logo {
+        height: 100%;
         display: block;
         width: $sidebarWidth;
         background: $sidebarBackground;

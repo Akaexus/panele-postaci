@@ -21,12 +21,32 @@ body, html, input {
   >#profile_background {
     padding: 0;
   }
+  .topic_buttons:last-of-type {
+    position: relative;
+    width: 250px;
+    text-align: center;
+    > li.non_button.clearfix {
+      margin: 0;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, -25%);
+      > a {
+        color: #ACB1B7;
+        font-family: Lato;
+        &:hover {
+          color: #c8ccd0;
+        }
+      }
+    }
+  }
 }
 
-#secondary_navigation, #content > .topic_buttons, #content > br {
+#secondary_navigation, #content > .topic_buttons:not(:last-of-type), #content > br {
   display: none;
 }
 #custom_background {
+  display: none;
   position: relative;
   >.topic_buttons {
     position: absolute;
